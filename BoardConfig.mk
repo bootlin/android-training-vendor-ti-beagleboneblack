@@ -20,6 +20,9 @@
 #USE_CAMERA_STUB := true
 BOARD_EGL_CFG := device/ti/beagleboneblack/egl.cfg
 
+# Use beaglebone camera cape as default
+BOARD_HAVE_CAMERA_CAPE := true
+
 # Use the non-open-source parts, if they're present
 #-include vendor/ti/panda/BoardConfigVendor.mk
 

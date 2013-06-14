@@ -22,6 +22,7 @@ PRODUCT_COPY_FILES := \
 	device/ti/beagleboneblack/fstab.am335xevm:root/fstab.am335xevm \
 	device/ti/beagleboneblack/ueventd.am335xevm.rc:root/ueventd.am335xevm.rc \
 	device/ti/beagleboneblack/media_codecs.xml:system/etc/media_codecs.xml \
+	device/ti/beagleboneblack/media_profiles.xml:system/etc/media_profiles.xml \
 	device/ti/beagleboneblack/mixer_paths.xml:system/etc/mixer_paths.xml \
 	device/ti/beagleboneblack/audio_policy.conf:system/etc/audio_policy.conf
 
