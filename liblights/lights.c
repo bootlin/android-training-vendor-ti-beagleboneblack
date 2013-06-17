@@ -84,7 +84,9 @@ set_light_backlight(struct light_device_t *dev,
 	int err = 0;
 	int brightness = rgb_to_brightness(state);
 
-	brightness = (brightness*100)/255.0;
+	/* change 0-255 scale to 0-100 */
+	brightness = ((brightness/255.0)*100);
+
 	pthread_mutex_lock(&g_lock);
 	/* Try to write to LCD7 Backlight node */
 	err = write_int(LCD7_FILE, brightness);
