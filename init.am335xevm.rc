@@ -20,7 +20,7 @@ on init
 
     # sdcard 4th partition - contains media samples
     export SECONDARY_STORAGE /storage/sdcard1
-    mkdir /storage/sdcard1 0000 system system
+    mkdir /storage/sdcard1 0555 root root
 
     # create directory for mounting usb drives
     mkdir /storage/usb1 0666 system system
@@ -67,12 +67,10 @@ service pvr /system/bin/sgx/rc.pvr start
     oneshot
 
 service dhcpcd_eth0 /system/bin/dhcpcd -ABKL -f/system/etc/dhcpcd/dhcpcd.conf
-    class main
     disabled
     oneshot
 
 service iprenew_eth0 /system/bin/dhcpcd -n
-    class main
     disabled
     oneshot
 

@@ -5,4 +5,4 @@
 
 
 /dev/block/platform/omap/omap_hsmmc.0/mmcblk0p3  /data               ext4      noatime,nosuid,nodev,nomblk_io_submit,errors=panic    wait
-
+/dev/block/platform/omap/omap_hsmmc.0/mmcblk0p4  /storage/sdcard1    vfat      defaults    wait
