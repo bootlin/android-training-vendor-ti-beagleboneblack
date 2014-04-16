@@ -18,10 +18,6 @@ on init
     symlink /storage/emulated/legacy /storage/sdcard0
     symlink /mnt/shell/emulated/0 /storage/emulated/legacy
 
-    # sdcard 4th partition - contains media samples
-    export SECONDARY_STORAGE /storage/sdcard1
-    mkdir /storage/sdcard1 0555 root root
-
     # create directory for mounting usb drives
     mkdir /storage/usb1 0666 system system
     symlink /storage/usb1 /usbdrive
