@@ -50,10 +50,6 @@ DEVICE_PACKAGE_OVERLAYS := \
 
 PRODUCT_TAGS += dalvik.gc.type-precise
 
-# host package required for making sdcard tarball
-PRODUCT_PACKAGES += \
-       fs_get_stats
-
 PRODUCT_PACKAGES += \
 	librs_jni \
 	com.android.future.usb.accessory
