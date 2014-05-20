@@ -14,6 +14,11 @@
 # limitations under the License.
 #
 
+ifeq ($(TARGET_PREBUILT_KERNEL),)
+	LOCAL_KERNEL := device/ti/beagleboneblack/kernel
+else
+	LOCAL_KERNEL := $(TARGET_PREBUILT_KERNEL)
+endif
 
 PRODUCT_COPY_FILES := \
 	device/ti/beagleboneblack/init.am335xevm.rc:root/init.am335xevm.rc \
@@ -24,7 +29,8 @@ PRODUCT_COPY_FILES := \
 	device/ti/beagleboneblack/media_codecs.xml:system/etc/media_codecs.xml \
 	device/ti/beagleboneblack/media_profiles.xml:system/etc/media_profiles.xml \
 	device/ti/beagleboneblack/mixer_paths.xml:system/etc/mixer_paths.xml \
-	device/ti/beagleboneblack/audio_policy.conf:system/etc/audio_policy.conf
+	device/ti/beagleboneblack/audio_policy.conf:system/etc/audio_policy.conf \
+	$(LOCAL_KERNEL):kernel
 
 
 # KeyPads

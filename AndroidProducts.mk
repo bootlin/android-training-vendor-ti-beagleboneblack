@@ -14,4 +14,6 @@
 # limitations under the License.
 #
 
-PRODUCT_MAKEFILES := $(LOCAL_DIR)/beagleboneblack.mk
+PRODUCT_MAKEFILES := \
+	$(LOCAL_DIR)/beagleboneblack.mk \
+	$(LOCAL_DIR)/training.mk
